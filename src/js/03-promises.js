@@ -10,14 +10,10 @@ function onFormSubmit(event) {
   for (let i = 0; i < amount.value; i+= 1) {
     createPromise(i, currentDelay)
           .then(({ position, delay }) => {
-            Notiflix.Notify.success(
-              `:white_check_mark: Fulfilled promise ${position} in ${delay}ms`
-            );
+           console.log(`✅ Fulfilled promise ${position} in ${delay}ms`)
           })
           .catch(({ position, delay }) => {
-            Notiflix.Notify.failure(
-              `:x: Rejected promise ${position} in ${delay}ms`
-            );
+            console.log(`❌ Rejected promise ${position} in ${delay}ms`);
           });
         //додаємо до поточної затримки крок збільшення затримки
         currentDelay += Number(step.value);

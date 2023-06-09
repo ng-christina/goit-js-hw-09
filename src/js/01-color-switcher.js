@@ -5,7 +5,7 @@ const stop = document.querySelector('[data-stop]');
 const start = document.querySelector('[data-start]');
 let timerId = null
 
-stop.disabled = false;
+stop.disabled = true;
 
 start.addEventListener("click", changeColor) 
 
@@ -17,14 +17,14 @@ function changeColor(event) {
         }, 1000
      )
      start.disabled = true;
-    //  stop.disabled = false;
+     stop.disabled = false;
 
 }
 
 function stopChangeColor(event) {
         clearInterval(timerId);   
         start.disabled = false;
-        stop.disabled = true;
+        // stop.disabled = false;
 
 }
 

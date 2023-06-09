@@ -17,7 +17,7 @@ function changeColor(event) {
         }, 1000
      )
      start.disabled = true;
-     stop.disabled = false;
+     stop.disabled = true;
 
 }
 

@@ -5,7 +5,7 @@ const stop = document.querySelector('[data-stop]');
 const start = document.querySelector('[data-start]');
 let timerId = null
 
-stop.disabled = true;
+// stop.disabled = true;
 
 start.addEventListener("click", changeColor) 
 

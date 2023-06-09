@@ -28,7 +28,7 @@ const options = {
 }
 const datePicker = flatpickr("#datetime-picker",options);
 startBtn.addEventListener('click', () => {
-  startCountdown(selectedDate);
+  startCountdown(datePicker.selectedDates[0]);
   startBtn.disabled = true;
   input.disabled= true
 });

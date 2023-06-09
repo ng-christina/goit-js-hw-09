@@ -24,7 +24,7 @@ function changeColor(event) {
 function stopChangeColor(event) {
         clearInterval(timerId);   
         start.disabled = false;
-        stop.disabled = false;
+        stop.disabled = true;
 
 }
 

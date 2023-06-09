@@ -23,14 +23,15 @@ const options = {
       return;
     }
     startBtn.disabled = false;
-    startBtn.addEventListener('click', () => {
-      startCountdown(selectedDate);
-      startBtn.disabled = true;
-      input.disabled= true
-    });
+    
   },
 }
 const datePicker = flatpickr("#datetime-picker",options);
+startBtn.addEventListener('click', () => {
+  startCountdown(selectedDate);
+  startBtn.disabled = true;
+  input.disabled= true
+});
 
 function startCountdown(endTime) {
   countdownInterval = setInterval(() => {
